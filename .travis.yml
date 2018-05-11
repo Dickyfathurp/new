@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - '7.0'
+
+env: 
+  global:
+    - 'FTP_USER=fathoer65'
+    - 'FTP_PASS=banxat123'
+
+script:
+  - "curl -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com -Q 'mkd public_html/praktek-4d'"
+  - "curl -T akses-session.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T edit-from.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T hapus.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T index.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T koneksi.php-u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T simpan-baru.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T tambah.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
+  - "curl -T update.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/praktek-4d/"
